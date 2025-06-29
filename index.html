@@ -23,20 +23,49 @@
         a:hover {
             text-decoration: underline;
         }
+
+        #mobileMenu {
+            transition: max-height 0.3s ease-in-out;
+            overflow: hidden;
+            text-align: center;
+        }
+        #mobileMenu a {
+            padding: 1rem;
+            color: #fefcf9;
+            border-bottom: 1px solid #384a61;
+            border-style: none;
+            text-decoration: none;
+        }
+        #mobileMenu a:hover {
+            background-color: #384a61;
+            text-decoration: none;
+        }
     </style>
 </head>
 
 <body class="bg-[#fefcf9] text-[#213547]">
 
     <!-- Header Section -->
-    <header class="bg-[#213547] text-[#fefcf9] py-6 px-8 flex items-center justify-between">
+    <header class="bg-[#213547] text-[#fefcf9] py-6 px-8 flex items-center justify-between relative">
         <div class="flex items-center gap-4">
-            <img src="logo-placeholder.png" alt="Company Logo" class="w-12 h-12 rounded-full">
             <h1 class="text-2xl font-serif">ConatusClub</h1>
         </div>
-        <nav class="flex gap-6">
-            <a href="#contact" class="text-lg hover:underline">Contact</a>
-            <a href="#footer" class="text-lg hover:underline">Legal</a>
+
+        <!-- Hamburger Menu -->
+        <button id="hamburger" class="md:hidden text-[#fefcf9] focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <!-- Mobile Menu -->
+        <nav id="mobileMenu"
+            class="hidden absolute top-full left-0 w-full bg-[#213547] flex-col items-start md:static md:flex md:flex-row md:items-center md:w-auto md:bg-transparent">
+            <a href="#contact"
+                class="w-full text-left px-6 py-3 border-t border-[#384a61] text-lg hover:underline">Contact</a>
+            <a href="#footer"
+                class="w-full text-left px-6 py-3 border-t border-[#384a61] text-lg hover:underline">Legal</a>
         </nav>
     </header>
 
@@ -57,7 +86,8 @@
     <!-- About Section -->
     <section id="about" class="py-16 px-8 max-w-5xl mx-auto">
         <h2 class="text-3xl md:text-4xl font-serif mb-6 text-center">About CharDiwari</h2>
-        <p class="text-lg mb-4 text-center">CharDiwari.in is an initiative by ConatusClub to bring Indian craftsmanship to
+        <p class="text-lg mb-4 text-center">CharDiwari.in is an initiative by ConatusClub to bring Indian craftsmanship
+            to
             every home.</p>
         <p class="text-lg mb-6 text-center">Our mission is to preserve traditional artistry while offering eco-friendly,
             ethically sourced products.</p>
@@ -139,6 +169,13 @@
     </div>
 
     <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
         function openPrivacyModal() {
             document.getElementById('privacyModal').classList.remove('hidden');
         }
