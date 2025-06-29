@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConatusClub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body class="bg-[#fefcf9] text-[#213547]">
+
+    <!-- Header Section -->
+    <header class="bg-[#213547] text-[#fefcf9] py-6 px-8 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <img src="logo-placeholder.png" alt="Company Logo" class="w-12 h-12 rounded-full">
+            <h1 class="text-2xl font-serif">ConatusClub</h1>
+        </div>
+        <nav class="flex gap-6">
+            <a href="#contact" class="text-lg hover:underline">Contact</a>
+            <a href="#footer" class="text-lg hover:underline">Legal</a>
+        </nav>
+    </header>
+
+    <section class="bg-[#e2c6ac] text-[#fefcf9] text-center py-16 px-8">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-serif mb-6">Rooted in Tradition. Designed for Modern Homes.</h1>
+            <p class="text-lg md:text-xl mb-8">
+                ConatusClub introduces CharDiwari.in, your destination for handcrafted ceramic and terracotta decor.
+            </p>
+            <a href="https://chardiwari.in"
+                class="bg-[#b5835a] text-white py-3 px-8 rounded-lg hover:bg-[#a4724a] transition duration-300 shadow-lg"
+                target="_blank">
+                Explore CharDiWari
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-8 max-w-5xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-serif mb-6 text-center">About CharDiwari</h2>
+        <p class="text-lg mb-4 text-center">CharDiwari.in is an initiative by ConatusClub to bring Indian craftsmanship to
+            every home.</p>
+        <p class="text-lg mb-6 text-center">Our mission is to preserve traditional artistry while offering eco-friendly,
+            ethically sourced products.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div
+                class="w-full h-40 bg-gray-200 rounded-lg flex items-center justify-center shadow-md overflow-hidden group">
+                <img src="assets/images/pots.jpg" alt="Pottery"
+                    class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-110">
+            </div>
+            <div
+                class="w-full h-40 bg-gray-200 rounded-lg flex items-center justify-center shadow-md overflow-hidden group">
+                <img src="assets/images/mugs.jpg" alt="Mugs"
+                    class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-110">
+            </div>
+            <div
+                class="w-full h-40 bg-gray-200 rounded-lg flex items-center justify-center shadow-md overflow-hidden group">
+                <img src="assets/images/diyas.jpg" alt="Diyas"
+                    class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-110">
+            </div>
+            <div
+                class="w-full h-40 bg-gray-200 rounded-lg flex items-center justify-center shadow-md overflow-hidden group">
+                <img src="assets/images/kulhad.png" alt="Kulhads"
+                    class="w-full h-full object-cover rounded-lg transition-transform duration-300 group-hover:scale-110">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-8 max-w-5xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-serif mb-6 text-center">Contact Us</h2>
+        <p class="text-lg mb-4 text-center">Email: conatusclub2025@gmail.com</p>
+        <p class="text-lg mb-4 text-center">Phone: +91 9310650417</p>
+        <div class="flex justify-center gap-6">
+            <a href="https://www.instagram.com/chardiwari.in" class="text-[#b5835a] hover:underline text-lg"
+                target="_blank">Instagram</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="py-6 bg-[#213547] text-[#fefcf9] text-center">
+        <div class="mb-4">
+            <a href="#" class="text-[#b5835a] hover:underline mx-4" onclick="openPrivacyModal()">Privacy Policy</a>
+            <a href="#" class="text-[#b5835a] hover:underline mx-4" onclick="openTermsModal()">Terms & Conditions</a>
+        </div>
+        <p>Copyright © ConatusClub</p>
+    </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg p-8 max-w-lg w-full">
+            <h2 class="text-2xl font-serif mb-4">Privacy Policy</h2>
+            <p class="text-lg mb-4">
+                At ConatusClub, we value your privacy. We collect and use your information responsibly to provide a
+                seamless experience. Your data will never be shared with third parties without your consent.
+            </p>
+            <p class="text-lg mb-4">
+                For more details, please contact us at conatusclub2025@gmail.com.
+            </p>
+            <button class="bg-[#b5835a] text-white py-2 px-6 rounded hover:bg-[#a4724a] transition"
+                onclick="closePrivacyModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Terms & Conditions Modal -->
+    <div id="termsModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg p-8 max-w-lg w-full">
+            <h2 class="text-2xl font-serif mb-4">Terms & Conditions</h2>
+            <p class="text-lg mb-4">
+                By using our website, you agree to comply with our terms and conditions. All products are subject to
+                availability, and prices may change without prior notice. We reserve the right to refuse service to
+                anyone for any reason.
+            </p>
+            <p class="text-lg mb-4">
+                For more details, please contact us at conatusclub2025@gmail.com.
+            </p>
+            <button class="bg-[#b5835a] text-white py-2 px-6 rounded hover:bg-[#a4724a] transition"
+                onclick="closeTermsModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function openPrivacyModal() {
+            document.getElementById('privacyModal').classList.remove('hidden');
+        }
+
+        function closePrivacyModal() {
+            document.getElementById('privacyModal').classList.add('hidden');
+        }
+
+        function openTermsModal() {
+            document.getElementById('termsModal').classList.remove('hidden');
+        }
+
+        function closeTermsModal() {
+            document.getElementById('termsModal').classList.add('hidden');
+        }
+    </script>
+</body>
+
+</html>
